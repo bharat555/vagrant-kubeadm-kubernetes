@@ -9,8 +9,10 @@ Vagrant.configure("2") do |config|
       echo "10.0.0.12  worker-node02" >> /etc/hosts
   SHELL
 
-  config.vm.box = "centos/stream8"
-  config.vm.box_version = "20210210.0"
+  #config.vm.box = "centos/stream8"
+  #config.vm.box_version = "20210210.0"
+  config.vm.box = "Centos8Stream-vbox-guest"
+
   config.vm.box_check_update = true
 
   config.vm.define "master" do |master|
