@@ -1,41 +1,22 @@
 
-# Vagrantfile and Scripts to Automate Kubernetes Setup using Kubeadm [Practice Environemnt for CKA/CKAD and CKS Exams]
+# Vagrantfile and Scripts to Automate Kubernetes Setup using Kubeadm using CentOS_8_Stream
 
 ## Documentation
 
-Current k8s version for CKA, CKAD and CKS exam: 1.22.
-
-Refer this link for documentation: https://devopscube.com/kubernetes-cluster-vagrant/
-
-## 🚀 CKA, CKAD, CKS or KCNA Voucher Codes
-
-If you are preparing for CKA, CKAD, CKS or KCNA exam, **get $57 discount** today using code **SCOFFER15** at https://kube.promo/latest. It is a limited time offer
+Current k8s version : 1.22.8-0
 
 ## Prerequisites
 
 1. Working Vagrant setup
 2. 8 Gig + RAM workstation as the Vms use 3 vCPUS and 4+ GB RAM
 
-## For MAC Users
-
-Latest version of Virtualbox for Mac/Linux can cause issues because you have to create/edit the /etc/vbox/networks.conf file and add:
-<pre>* 0.0.0.0/0 ::/0</pre>
-
-or run below commands
-```sh
-sudo mkdir -p /etc/vbox/
-echo * 0.0.0.0/0 ::/0 | sudo tee -a /etc/vbox/networks.conf
-```
-
-So that the host only networks can be in any range, not just 192.168.56.0/21 as described here:
-https://discuss.hashicorp.com/t/vagrant-2-2-18-osx-11-6-cannot-create-private-network/30984/23
  
 ## Usage/Examples
 
 To provision the cluster, execute the following commands.
 
 ```shell
-git clone https://github.com/scriptcamp/vagrant-kubeadm-kubernetes.git
+git clone https://github.com/bharat555/vagrant-kubeadm-kubernetes.git
 cd vagrant-kubeadm-kubernetes
 vagrant up
 ```
@@ -88,7 +69,4 @@ vagrant up
 vagrant destroy -f
 ```
 
-## Centos & HA based Setup
-
-If you want Centos based setup, please refer https://github.com/marthanda93/VAAS
   
